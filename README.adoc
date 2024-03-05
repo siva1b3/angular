@@ -1,0 +1,56 @@
+= Getting Started with Angular
+
+== Introduction
+
+This document provides a step-by-step guide to getting started with an Angular project. It covers setting up the project, starting the development server, and other essential tasks.
+
+== Prerequisites
+
+Before you begin, ensure that you have the following installed:
+
+* Node.js and npm (Node Package Manager)
+* Angular CLI (Command Line Interface)
+
+== Setting Up the Project
+
+1. Open your terminal or command prompt.
+
+2. Create a new Angular project by running the following command:
+[source,shell]
+----
+ng new my-angular-project
+----
+
+3. Navigate into the newly created project directory:
+[source,shell]
+----
+cd my-angular-project
+----
+
+== Starting the Development Server
+
+To start the development server and view your Angular application in the browser, follow these steps:
+
+1. Run the following command to start the development server:
+[source,shell]
+----
+ng serve
+----
+
+2. Once the server is up and running, open your web browser and navigate to `http://localhost:4200/`.
+
+== Additional Commands
+
+Here are some additional commands that you may find useful while working on your Angular project:
+
+* `ng generate component <component-name>` - Generate a new component.
+* `ng generate service <service-name>` - Generate a new service.
+* `ng build` - Build the project for production.
+* `ng test` - Run unit tests.
+* `ng lint` - Lint the project files.
+
+== Conclusion
+
+Congratulations! You've successfully set up an Angular project and started the development server. You can now begin building your Angular application.
+
+For more information and advanced topics, refer to the official Angular documentation at https://angular.io/.
