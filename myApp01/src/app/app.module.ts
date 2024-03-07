@@ -33,21 +33,24 @@
 // server0302
 // 004 0302
 
-// import { BrowserModule } from '@angular/platform-browser';
-// import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-// import { AppComponent } from './app.component';
-// import { server0301Component } from './server0301/server0301.component';
-// import { Server0302Component } from './server0302/server0302.component';
-// import { AttributeSelector04Component } from './attribute-selector04/attribute-selector04.component';
+import { AppComponent } from './app.component';
+import { server0301Component } from "./002The Basics/server0301/server0301.component"
+import { Server0302Component } from "./002The Basics/server0302/server0302.component";
+import { AttributeSelector04Component } from "./002The Basics/attribute-selector04/attribute-selector04.component";
 
-// @NgModule({
-//   declarations: [AppComponent, server0301Component, Server0302Component, AttributeSelector04Component],
-//   imports: [BrowserModule],
-//   providers: [],
-//   bootstrap: [AppComponent],
-// })
-// export class AppModule {}
+@NgModule({
+  declarations: [AppComponent, server0301Component, Server0302Component, AttributeSelector04Component],
+  imports: [BrowserModule],
+  providers: [],
+  bootstrap: [AppComponent],
+  exports: [
+    server0301Component
+  ]
+})
+export class AppModule {}
 
 // AttributeSelector04
 
@@ -70,16 +73,16 @@
 
 // ClassSelector05Component
 
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { ClassSelector05Component } from './002The Basics/class-selector05/class-selector05.component';
-
-@NgModule({
-  declarations: [AppComponent, ClassSelector05Component],
-  imports: [BrowserModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+//
+// import { AppComponent } from "./app.component";
+// import { ClassSelector05Component } from "./002The Basics/class-selector05/class-selector05.component";
+//
+// @NgModule({
+//   declarations: [AppComponent, ClassSelector05Component],
+//   imports: [BrowserModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
