@@ -51,14 +51,33 @@
 
 // AttributeSelector04
 
+// import { BrowserModule } from '@angular/platform-browser';
+// import { NgModule } from '@angular/core';
+
+// import { AppComponent } from './app.component';
+// import { AttributeSelector04Component } from './002The Basics/attribute-selector04/attribute-selector04.component';
+
+// @NgModule({
+//   declarations: [
+//     AppComponent,
+//     AttributeSelector04Component,
+//   ],
+//   imports: [BrowserModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// ClassSelector05Component
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AttributeSelector04Component } from './002The Basics/attribute-selector04/attribute-selector04.component';
+import { ClassSelector05Component } from './002The Basics/class-selector05/class-selector05.component';
 
 @NgModule({
-  declarations: [AppComponent, AttributeSelector04Component],
+  declarations: [AppComponent, ClassSelector05Component],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
