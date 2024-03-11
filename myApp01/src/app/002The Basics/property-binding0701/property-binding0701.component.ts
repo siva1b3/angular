@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-property-binding0701',
@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./property-binding0701.component.css']
 })
 export class PropertyBinding0701Component implements OnInit {
+  isButtonDisabled: boolean = true
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }

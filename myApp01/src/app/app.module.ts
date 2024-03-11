@@ -120,14 +120,49 @@
 
 // PropertyBinding0701Component
 
+// import {BrowserModule} from "@angular/platform-browser";
+// import {NgModule} from "@angular/core";
+//
+// import {AppComponent} from "./app.component";
+// import {PropertyBinding0701Component} from './002The Basics/property-binding0701/property-binding0701.component';
+//
+// @NgModule({
+//   declarations: [AppComponent, PropertyBinding0701Component],
+//   imports: [BrowserModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {
+// }
+
+// EventBinding0702Component
+
+// import {BrowserModule} from "@angular/platform-browser";
+// import {NgModule} from "@angular/core";
+//
+// import {AppComponent} from "./app.component";
+// import {EventBinding0702Component} from './002The Basics/event-binding0702/event-binding0702.component';
+//
+// @NgModule({
+//   declarations: [AppComponent, EventBinding0702Component],
+//   imports: [BrowserModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {
+// }
+
+// PassingData0703Component
+
+
 import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
 
 import {AppComponent} from "./app.component";
-import {PropertyBinding0701Component} from './002The Basics/property-binding0701/property-binding0701.component';
+import {PassingData0703Component} from './002The Basics/passing-data0703/passing-data0703.component';
 
 @NgModule({
-  declarations: [AppComponent, PropertyBinding0701Component],
+  declarations: [AppComponent, PassingData0703Component],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
