@@ -1,0 +1,6 @@
+<p>assignment0803 works!</p>
+<h2>Two way binding</h2>
+<label for="userName">User Name</label>
+<input [(ngModel)]=userName id="userName" name="userName" type="text">
+<button (click)=resetUserName() [disabled]=checkUserName() type="button">Submit</button>
+<p>user Name output {{ userName }}</p>

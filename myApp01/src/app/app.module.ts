@@ -154,16 +154,72 @@
 
 // PassingData0703Component
 
+// import {BrowserModule} from "@angular/platform-browser";
+// import {NgModule} from "@angular/core";
+//
+// import {AppComponent} from "./app.component";
+// import {PassingData0703Component} from './002The Basics/passing-data0703/passing-data0703.component';
+//
+// @NgModule({
+//   declarations: [AppComponent, PassingData0703Component],
+//   imports: [BrowserModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {
+// }
+
+// TwoWayBinding08Component
+
+
+// import {BrowserModule} from "@angular/platform-browser";
+// import {NgModule} from "@angular/core";
+//
+// import {AppComponent} from "./app.component";
+// import {TwoWayBinding08Component} from './002The Basics/two-way-binding08/two-way-binding08.component';
+// import {FormsModule} from "@angular/forms";
+//
+// @NgModule({
+//   declarations: [AppComponent, TwoWayBinding08Component],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {
+// }
+
+// CombiningAllTypesOfBindings0802Component
+
+// import {BrowserModule} from "@angular/platform-browser";
+// import {NgModule} from "@angular/core";
+//
+// import {AppComponent} from "./app.component";
+// import {FormsModule} from "@angular/forms";
+// import {
+//   CombiningAllTypesOfBindings0802Component
+// } from './002The Basics/combining-alltypes-of-bindings0802/combining-all-types-of-bindings0802.component';
+//
+// @NgModule({
+//   declarations: [AppComponent, CombiningAllTypesOfBindings0802Component],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {
+// }
+
+// Assignment0803Component
 
 import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
 
 import {AppComponent} from "./app.component";
-import {PassingData0703Component} from './002The Basics/passing-data0703/passing-data0703.component';
+import {FormsModule} from "@angular/forms";
+import {Assignment0803Component} from './002The Basics/assignment0803/assignment0803.component';
 
 @NgModule({
-  declarations: [AppComponent, PassingData0703Component],
-  imports: [BrowserModule],
+  declarations: [AppComponent, Assignment0803Component],
+  imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

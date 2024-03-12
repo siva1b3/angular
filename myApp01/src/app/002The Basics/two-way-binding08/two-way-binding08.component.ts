@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-passing-data0703',
-  templateUrl: './passing-data0703.component.html',
-  styleUrls: ['./passing-data0703.component.css']
+  selector: 'app-two-way-binding08',
+  templateUrl: './two-way-binding08.component.html',
+  styleUrls: ['./two-way-binding08.component.css']
 })
-export class PassingData0703Component implements OnInit {
-  userName: string | undefined = undefined
+export class TwoWayBinding08Component implements OnInit {
+
+  userName: string | undefined = "siva"
 
   constructor() {
   }
@@ -33,11 +34,10 @@ export class PassingData0703Component implements OnInit {
       this.userName = "";
       return;
     }
-    
+
     // If all guard clauses pass, assign the input value to userName
     this.userName = inputValue;
   }
-
 
   ngOnInit(): void {
   }

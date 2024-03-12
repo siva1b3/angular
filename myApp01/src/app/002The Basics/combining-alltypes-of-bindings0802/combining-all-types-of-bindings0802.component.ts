@@ -1,12 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-passing-data0703',
-  templateUrl: './passing-data0703.component.html',
-  styleUrls: ['./passing-data0703.component.css']
+  selector: 'app-combining-alltypes-of-bindings0802',
+  templateUrl: './combining-all-types-of-bindings0802.component.html',
+  styleUrls: ['./combining-all-types-of-bindings0802.component.css']
 })
-export class PassingData0703Component implements OnInit {
-  userName: string | undefined = undefined
+export class CombiningAllTypesOfBindings0802Component implements OnInit {
+  isDisabled: boolean = false
+
+  username: string | undefined = undefined
+  age: number | null | undefined = 10
 
   constructor() {
   }
@@ -30,14 +33,13 @@ export class PassingData0703Component implements OnInit {
     // Guard clause to check if the input value is empty
     const inputValue = inputElement.value.trim();
     if (!inputValue) {
-      this.userName = "";
+      this.username = "";
       return;
     }
-    
-    // If all guard clauses pass, assign the input value to userName
-    this.userName = inputValue;
-  }
 
+    // If all guard clauses pass, assign the input value to userName
+    this.username = inputValue;
+  }
 
   ngOnInit(): void {
   }
