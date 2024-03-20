@@ -1,0 +1,9 @@
+<p>ngif-directive0901</p>
+<label for="userName">UserName</label>
+<input [(ngModel)]=userName id="userName" name="userName" type="text">
+<button (click)=submitUserName() *ngIf=!isUserNameSubmitted [disabled]=!userName class="btn btn-primary">Submit
+</button>
+<button (click)=resetUserName() *ngIf=isUserNameSubmitted [disabled]=isButtonEnabled class="btn btn-warning">reset
+</button>
+<p *ngIf=isUserNameSubmitted>Output Name {{ userName }}</p>
+<p *ngIf=!isUserNameSubmitted>No userName</p>

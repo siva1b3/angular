@@ -85,7 +85,6 @@
 // })
 // export class AppModule {}
 
-
 // Documnet06Component
 
 // import { BrowserModule } from "@angular/platform-browser";
@@ -171,7 +170,6 @@
 
 // TwoWayBinding08Component
 
-
 // import {BrowserModule} from "@angular/platform-browser";
 // import {NgModule} from "@angular/core";
 //
@@ -210,18 +208,52 @@
 
 // Assignment0803Component
 
-import {BrowserModule} from "@angular/platform-browser";
-import {NgModule} from "@angular/core";
+// import {BrowserModule} from "@angular/platform-browser";
+// import {NgModule} from "@angular/core";
+//
+// import {AppComponent} from "./app.component";
+// import {FormsModule} from "@angular/forms";
+// import {Assignment0803Component} from './002The Basics/assignment0803/assignment0803.component';
+//
+// @NgModule({
+//   declarations: [AppComponent, Assignment0803Component],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {
+// }
 
-import {AppComponent} from "./app.component";
-import {FormsModule} from "@angular/forms";
-import {Assignment0803Component} from './002The Basics/assignment0803/assignment0803.component';
+// Directive09Component
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { FormsModule } from "@angular/forms";
+// import { Directive09Component } from "./002The Basics/directive09/directive09.component";
+
+// @NgModule({
+//   declarations: [AppComponent, Directive09Component],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// NgifDirective0901Component
+
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+
+import { AppComponent } from "./app.component";
+import { FormsModule } from "@angular/forms";
+import { NgifDirective0901Component } from "./002The Basics/ngif-directive0901/ngif-directive0901.component";
 
 @NgModule({
-  declarations: [AppComponent, Assignment0803Component],
+  declarations: [AppComponent, NgifDirective0901Component],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}
