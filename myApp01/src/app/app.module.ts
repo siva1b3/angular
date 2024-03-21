@@ -248,7 +248,7 @@ import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
-import { NgifDirective0901Component } from "./002The Basics/ngif-directive0901/ngif-directive0901.component";
+import { NgifDirective0901Component } from "./002The Basics/NgifDirective0901/NgifDirective0901.component";
 
 @NgModule({
   declarations: [AppComponent, NgifDirective0901Component],
