@@ -1,0 +1,42 @@
+<div *ngIf="isLoggedIn(); else elseBlock">
+  <p>Welcome, user!</p>
+  <button (click)="logout()">Logout</button>
+</div>
+
+<ng-template #elseBlock>
+  <p>Please log in to continue.</p>
+  <button (click)="login()">Login</button>
+</ng-template>
+
+<div>
+  <h1>Your age is {{ serverComponet.age }}</h1>
+  <div
+    *ngIf="
+      serverComponet.age >= 18 && serverComponet.age <= 25;
+      then overAgeContent;
+      else underageContent
+    "
+  ></div>
+
+  <ng-template #overAgeContent>
+    <div>
+      <h2>Welcome to the overAge Section</h2>
+      <p>Enjoy exclusive content for overAges.</p>
+      <!-- Additional overAge content here -->
+    </div>
+  </ng-template>
+
+  <ng-template #underageContent>
+    <div>
+      <h2>Access Denied</h2>
+      <p>You must be 18 or older to access this content.</p>
+      <!-- Additional content for underage users -->
+    </div>
+  </ng-template>
+</div>
+
+<button (click)="incrementAge()">Increase Age</button>
+<button (click)="decrementAge()">Decrease Age</button>
+<br />
+<br />
+<br />

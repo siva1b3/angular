@@ -1,0 +1,18 @@
+<select (change)="selectColor($event)">
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="green">Green</option>
+</select>
+
+<div [ngSwitch]="selectedColor()">
+  <p *ngSwitchCase="'red'" [style.backgroundColor]="selectedColor()">
+    You selected red!
+  </p>
+  <p *ngSwitchCase="'blue'" [style.backgroundColor]="selectedColor()">
+    You selected blue!
+  </p>
+  <p *ngSwitchCase="'green'" [style.backgroundColor]="selectedColor()">
+    You selected green!
+  </p>
+  <p *ngSwitchDefault>Choose a color!</p>
+</div>

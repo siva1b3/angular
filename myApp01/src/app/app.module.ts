@@ -243,15 +243,49 @@
 
 // NgifDirective0901Component
 
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { FormsModule } from "@angular/forms";
+// import { NgifDirective0901Component } from "./002The Basics/NgifDirective0901/NgifDirective0901.component";
+
+// @NgModule({
+//   declarations: [AppComponent, NgifDirective0901Component],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// NgIfThenElse0902Component
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { FormsModule } from "@angular/forms";
+// import { NgIfThenElse0902Component } from "./002The Basics/ngIfThenElse0902/ngIfThenElse0902.component";
+
+// @NgModule({
+//   declarations: [AppComponent, NgIfThenElse0902Component],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// NgSwitch0903Component
+
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
-import { NgifDirective0901Component } from "./002The Basics/NgifDirective0901/NgifDirective0901.component";
+import { NgSwitch0903Component } from "./002The Basics/ngSwitch0903/ngSwitch0903.component";
 
 @NgModule({
-  declarations: [AppComponent, NgifDirective0901Component],
+  declarations: [AppComponent, NgSwitch0903Component],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

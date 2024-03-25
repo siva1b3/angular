@@ -1,3 +1,30 @@
-<p>
-  NgifDirective0901 works!
-</p>
+<label for="serverName">Server Name:</label>
+<input
+  type="text"
+  class="form-control"
+  id="serverName"
+  name="serverName"
+  (input)="onInputEdited()"
+  [(ngModel)]="server.serverName"
+/>
+<button
+  *ngIf="shouldDisplaySubmitButton()"
+  (click)="onClickSubmitButton()"
+  class="btn btn-primary"
+>
+  Submit
+</button>
+<button
+  *ngIf="shouldDisplayResetButton()"
+  (click)="onClickResetButton()"
+  class="btn btn-warning"
+>
+  reset
+</button>
+<h3 *ngIf="shouldDisplayServerName()">
+  Server Name is {{ server.serverName }}
+</h3>
+<h3 *ngIf="shouldDisplayNoServerName()">No server name</h3>
+<h3 *ngIf="shouldDisplayToEditServerName()">
+  you are trying to edit the existing server name {{ server.oldServerName }}
+</h3>
