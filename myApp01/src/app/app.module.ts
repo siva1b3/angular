@@ -277,15 +277,49 @@
 
 // NgSwitch0903Component
 
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { FormsModule } from "@angular/forms";
+// import { NgSwitch0903Component } from "./002The Basics/ngSwitch0903/ngSwitch0903.component";
+
+// @NgModule({
+//   declarations: [AppComponent, NgSwitch0903Component],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// NgStyleAndngClass0904Component
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { FormsModule } from "@angular/forms";
+// import { NgStyleAndngClass0904Component } from "./002The Basics/ngStyleAndngClass0904/ngStyleAndngClass0904.component";
+
+// @NgModule({
+//   declarations: [AppComponent, NgStyleAndngClass0904Component],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// NgFor0905Component
+
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
-import { NgSwitch0903Component } from "./002The Basics/ngSwitch0903/ngSwitch0903.component";
+import { NgFor0905Component } from "./002The Basics/ngFor0905/ngFor0905.component";
 
 @NgModule({
-  declarations: [AppComponent, NgSwitch0903Component],
+  declarations: [AppComponent, NgFor0905Component],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

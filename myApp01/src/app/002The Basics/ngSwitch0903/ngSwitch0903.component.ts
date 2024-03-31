@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./ngSwitch0903.component.css"],
 })
 export class NgSwitch0903Component implements OnInit {
-  color: string = "red";
+  color: string | undefined = undefined;
   selectColor(event: Event) {
     const elemennt = event.target as HTMLSelectElement;
     this.color = elemennt.value;
