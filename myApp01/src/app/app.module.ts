@@ -311,15 +311,64 @@
 
 // NgFor0905Component
 
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { FormsModule } from "@angular/forms";
+// import { NgFor0905Component } from "./002The Basics/ngFor0905/ngFor0905.component";
+
+// @NgModule({
+//   declarations: [AppComponent, NgFor0905Component],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// Assignmnet10Component
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { FormsModule } from "@angular/forms";
+// import { Assignmnet10Component } from "./002The Basics/Assignmnet10/Assignmnet10.component";
+
+// @NgModule({
+//   declarations: [AppComponent, Assignmnet10Component],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// A004debuggingComponent
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { FormsModule } from "@angular/forms";
+// import { A004debuggingComponent } from "./A004debugging/A004debugging.component";
+
+// @NgModule({
+//   declarations: [AppComponent, A004debuggingComponent],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
-import { NgFor0905Component } from "./002The Basics/ngFor0905/ngFor0905.component";
+import { A005DatabindingDeepDiveComponent } from "./A005DatabindingDeepDive/A005DatabindingDeepDive.component";
 
 @NgModule({
-  declarations: [AppComponent, NgFor0905Component],
+  declarations: [AppComponent, A005DatabindingDeepDiveComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

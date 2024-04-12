@@ -1,0 +1,46 @@
+<h1>Assignment Optional</h1>
+<button type="button" (click)="toggleParagraphVisibility()">
+  Toggle Details
+</button>
+<div *ngIf="isParagraphVisible()">
+  <br />
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quo alias
+    voluptate, perspiciatis, pariatur eum beatae dolorum nisi excepturi sapiente
+    tenetur, tempore hic saepe? Eveniet, nemo. Sed, laudantium ullam excepturi
+    veniam pariatur neque eveniet ipsam repudiandae consectetur consequatur
+    suscipit porro quas animi, similique, nesciunt dignissimos dicta rerum
+    molestias fuga perferendis quibusdam placeat temporibus nisi. Natus quam
+    temporibus quaerat qui nemo quis at dolores corporis non aspernatur,
+    repellendus accusantium libero pariatur incidunt voluptatem saepe rem
+    tempore placeat quos labore mollitia reiciendis, autem laborum odit? Neque
+    nemo, ab eum est temporibus mollitia minima reiciendis hic quam et, facilis
+    explicabo. Quae, non vitae?
+  </p>
+  <br />
+</div>
+<h2>Enter Names</h2>
+<label for="nameInput">Name:</label>
+<input
+  type="text"
+  id="nameInput"
+  name="nameInput"
+  [(ngModel)]="componentData.newName"
+/>
+<button type="button" (click)="addNameToList()">Add Name</button>
+
+<div
+  *ngIf="componentData.ListData.list && componentData.ListData.list.length > 0"
+>
+  <ul>
+    <li *ngFor="let item of componentData.ListData.list">{{ item }}</li>
+  </ul>
+</div>
+
+<div
+  *ngIf="
+    !componentData.ListData.list || componentData.ListData.list.length === 0
+  "
+>
+  <p>No items to display.</p>
+</div>
