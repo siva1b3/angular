@@ -343,6 +343,32 @@
 // })
 // export class AppModule {}
 
+// A003CourseProjectComponent
+
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+
+import { AppComponent } from "./app.component";
+import { FormsModule } from "@angular/forms";
+import { A003CourseProjectComponent } from "./A003CourseProject/A003CourseProject.component";
+import { B001HeaderComponetComponent } from "./A003CourseProject/B001HeaderComponet/B001HeaderComponet.component";
+import { B002ShoppingListComponent } from "./A003CourseProject/B002ShoppingList/B002ShoppingList.component";
+import { B003RecipeBookComponent } from "./A003CourseProject/B003RecipeBook/B003RecipeBook.component";
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    A003CourseProjectComponent,
+    B001HeaderComponetComponent,
+    B002ShoppingListComponent,
+    B003RecipeBookComponent,
+  ],
+  imports: [BrowserModule, FormsModule],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+
 // A004debuggingComponent
 
 // import { BrowserModule } from "@angular/platform-browser";
@@ -360,17 +386,19 @@
 // })
 // export class AppModule {}
 
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+// A005DatabindingDeepDiveComponent
 
-import { AppComponent } from "./app.component";
-import { FormsModule } from "@angular/forms";
-import { A005DatabindingDeepDiveComponent } from "./A005DatabindingDeepDive/A005DatabindingDeepDive.component";
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
 
-@NgModule({
-  declarations: [AppComponent, A005DatabindingDeepDiveComponent],
-  imports: [BrowserModule, FormsModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
+// import { AppComponent } from "./app.component";
+// import { FormsModule } from "@angular/forms";
+// import { A005DatabindingDeepDiveComponent } from "./A005DatabindingDeepDive/A005DatabindingDeepDive.component";
+
+// @NgModule({
+//   declarations: [AppComponent, A005DatabindingDeepDiveComponent],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
