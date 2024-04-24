@@ -1,17 +1,12 @@
 <div class="container">
-  <app-A001InputFromElement
-    [serverElements]="serverElements"
-    [newServerName]="newServerName"
-    [newServerContent]="newServerContent"
-  ></app-A001InputFromElement>
+  <B001Cockpit></B001Cockpit>
   <hr />
   <div class="row">
     <div class="col-xs-12">
-      <div class="panel panel-default" *ngFor="let element of serverElements">
-        <app-A002DisplayListElement
-          [element]="element"
-        ></app-A002DisplayListElement>
-      </div>
+      <B002ServerElement
+        *ngFor="let serverElement of serverElements"
+        [element]="serverElement"
+      ></B002ServerElement>
     </div>
   </div>
 </div>

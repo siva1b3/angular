@@ -345,29 +345,29 @@
 
 // A003CourseProjectComponent
 
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
 
-import { AppComponent } from "./app.component";
-import { FormsModule } from "@angular/forms";
-import { A003CourseProjectComponent } from "./A003CourseProject/A003CourseProject.component";
-import { B001HeaderComponetComponent } from "./A003CourseProject/B001HeaderComponet/B001HeaderComponet.component";
-import { B002ShoppingListComponent } from "./A003CourseProject/B002ShoppingList/B002ShoppingList.component";
-import { B003RecipeBookComponent } from "./A003CourseProject/B003RecipeBook/B003RecipeBook.component";
+// import { AppComponent } from "./app.component";
+// import { FormsModule } from "@angular/forms";
+// import { A003CourseProjectComponent } from "./A003CourseProject/A003CourseProject.component";
+// import { B001HeaderComponetComponent } from "./A003CourseProject/B001HeaderComponet/B001HeaderComponet.component";
+// import { B002ShoppingListComponent } from "./A003CourseProject/B002ShoppingList/B002ShoppingList.component";
+// import { B003RecipeBookComponent } from "./A003CourseProject/B003RecipeBook/B003RecipeBook.component";
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    A003CourseProjectComponent,
-    B001HeaderComponetComponent,
-    B002ShoppingListComponent,
-    B003RecipeBookComponent,
-  ],
-  imports: [BrowserModule, FormsModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
+// @NgModule({
+//   declarations: [
+//     AppComponent,
+//     A003CourseProjectComponent,
+//     B001HeaderComponetComponent,
+//     B002ShoppingListComponent,
+//     B003RecipeBookComponent,
+//   ],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
 
 // A004debuggingComponent
 
@@ -388,17 +388,24 @@ export class AppModule {}
 
 // A005DatabindingDeepDiveComponent
 
-// import { BrowserModule } from "@angular/platform-browser";
-// import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-// import { AppComponent } from "./app.component";
-// import { FormsModule } from "@angular/forms";
-// import { A005DatabindingDeepDiveComponent } from "./A005DatabindingDeepDive/A005DatabindingDeepDive.component";
+import { AppComponent } from "./app.component";
+import { FormsModule } from "@angular/forms";
+import { A005DatabindingDeepDiveComponent } from "./A005DatabindingDeepDive/A005DatabindingDeepDive.component";
+import { B001CockpitComponent } from "./A005DatabindingDeepDive/B001Cockpit/B001Cockpit.component";
+import { B002ServerElementComponent } from "./A005DatabindingDeepDive/B002ServerElement/B002ServerElement.component";
 
-// @NgModule({
-//   declarations: [AppComponent, A005DatabindingDeepDiveComponent],
-//   imports: [BrowserModule, FormsModule],
-//   providers: [],
-//   bootstrap: [AppComponent],
-// })
-// export class AppModule {}
+@NgModule({
+  declarations: [
+    AppComponent,
+    A005DatabindingDeepDiveComponent,
+    B001CockpitComponent,
+    B002ServerElementComponent,
+  ],
+  imports: [BrowserModule, FormsModule],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
