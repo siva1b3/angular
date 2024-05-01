@@ -80,18 +80,81 @@
 
 // B004OptionalAssignmentComponent
 
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { A002TheBasicsComponent } from "./A002TheBasics/A002TheBasics.component";
+// import { B004OptionalAssignmentComponent } from "./A002TheBasics/B004OptionalAssignment/B004OptionalAssignment.component";
+
+// @NgModule({
+//   declarations: [
+//     AppComponent,
+//     A002TheBasicsComponent,
+//     B004OptionalAssignmentComponent,
+//   ],
+//   imports: [BrowserModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// B005stringInterpolationComponent
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { A002TheBasicsComponent } from "./A002TheBasics/A002TheBasics.component";
+// import { B005stringInterpolationComponent } from "./A002TheBasics/B005stringInterpolation/B005stringInterpolation.component";
+
+// @NgModule({
+//   declarations: [
+//     AppComponent,
+//     A002TheBasicsComponent,
+//     B005stringInterpolationComponent,
+//   ],
+//   imports: [BrowserModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// B006PropertyBindingComponent
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+
+// import { AppComponent } from "./app.component";
+// import { A002TheBasicsComponent } from "./A002TheBasics/A002TheBasics.component";
+// import { B006PropertyBindingComponent } from "./A002TheBasics/B006PropertyBinding/B006PropertyBinding.component";
+
+// @NgModule({
+//   declarations: [
+//     AppComponent,
+//     A002TheBasicsComponent,
+//     B006PropertyBindingComponent,
+//   ],
+//   imports: [BrowserModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// B007EventBindingComponent
+
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { A002TheBasicsComponent } from "./A002TheBasics/A002TheBasics.component";
-import { B004OptionalAssignmentComponent } from "./A002TheBasics/B004OptionalAssignment/B004OptionalAssignment.component";
+import { B007EventBindingComponent } from "./A002TheBasics/B007EventBinding/B007EventBinding.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     A002TheBasicsComponent,
-    B004OptionalAssignmentComponent,
+    B007EventBindingComponent,
   ],
   imports: [BrowserModule],
   providers: [],

@@ -1,0 +1,15 @@
+.clicked {
+  background-color: lightblue;
+}
+
+.hovered {
+  border-color: green;
+}
+
+.mouseOver {
+  font-weight: bold;
+}
+
+.mouseOut {
+  color: red;
+}

@@ -1,0 +1,17 @@
+<div
+  (click)="handleClick()"
+  (mouseenter)="handleMouseEnter()"
+  (mouseleave)="handleMouseLeave()"
+  (mouseover)="handleMouseOver()"
+  (mouseout)="handleMouseOut()"
+  [ngClass]="{
+    clicked: clicked,
+    hovered: hovered,
+    mouseOver: mouseOver,
+    mouseOut: mouseOut
+  }"
+  style="border: 1px solid black; padding: 20px"
+>
+  <button>Hover over me!</button>
+  <p>{{ message }}</p>
+</div>
