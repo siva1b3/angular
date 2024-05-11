@@ -1,0 +1,60 @@
+input[type="text"],
+textarea,
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Styling for radio buttons */
+.radio-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Styling for select dropdown */
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="black" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat;
+  background-position: calc(100% - 10px) center;
+  background-size: 20px;
+}
+.select-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="black" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat;
+  background-position: calc(100% - 10px) center;
+  background-size: 20px;
+}

@@ -1,0 +1,33 @@
+<hr />
+<h3>Basic syntax</h3>
+<p [ngStyle]="stylesObject()">This is a dynamically styled paragraph.</p>
+<button (click)="toggleError()">Toggle Error</button>
+<hr />
+
+<h3>Object syntax</h3>
+<p [ngStyle]="styleObject()">Dynamic Styling with ngStyle Object Syntax</p>
+<hr />
+
+<h3>Array syntax</h3>
+<button (click)="handleButtonClick()">Change Style</button>
+<br />
+<p [ngStyle]="getStylesBasedOnStyleIndex()">
+  Dynamic Styling with ngStyle Array Syntax
+</p>
+<hr />
+<h3>conditional styles</h3>
+<div *ngIf="errorStatePostive()" [ngStyle]="getstylePostiveErrorState()">
+  <p>Error: Please correct the following issues.</p>
+</div>
+<div *ngIf="errorStateNegative()" [ngStyle]="getstyleNegativeErrorState()">
+  <p>Success: Data saved successfully.</p>
+</div>
+<button type="button" (click)="changeConditionClick()">change condition</button>
+<hr />
+<h3>Dynamic Styling</h3>
+<!-- Component Template -->
+<div [ngStyle]="{ 'background-color': getDynamicBackgroundColor() }">
+  <p>Dynamic Background Color</p>
+</div>
+<button (click)="toggleActive()">Toggle Active</button>
+<hr />

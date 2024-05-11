@@ -1,0 +1,63 @@
+<!-- Text Input Example -->
+<input type="text" [(ngModel)]="textValue" placeholder="Enter Text" />
+
+<!-- Checkbox Example -->
+<input type="checkbox" [(ngModel)]="checkboxValue" /> Checkbox
+
+<!-- Radio Button Examples -->
+<div>
+  <input
+    type="radio"
+    name="radioGroup"
+    value="option1"
+    [(ngModel)]="radioValue"
+  />
+  Option 1
+</div>
+<div>
+  <input
+    type="radio"
+    name="radioGroup"
+    value="option2"
+    [(ngModel)]="radioValue"
+  />
+  Option 2
+</div>
+
+<!-- Select Dropdown Example -->
+<div class="select-wrapper">
+  <select [(ngModel)]="selectValue">
+    <option value="" disabled selected hidden>Select</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+  </select>
+
+  <!-- Display the reset button only if an option is selected -->
+  <button
+    *ngIf="isOptionSelected()"
+    (click)="resetSelection()"
+    class="btn btn-primary"
+  >
+    Reset Selection
+  </button>
+</div>
+
+<!-- Textarea Example -->
+<textarea [(ngModel)]="textareaValue" placeholder="Enter Text"></textarea>
+
+<!-- Date Input Example -->
+<input type="date" [(ngModel)]="dateValue" />
+
+<!-- Displaying Values -->
+<p>Text Value: {{ textValue }}</p>
+<p>Checkbox Value: {{ checkboxValue }}</p>
+<p>Radio Value: {{ radioValue }}</p>
+
+<!-- Display the selected value if selectValue is not empty -->
+<p *ngIf="isOptionSelected()">Select Value: {{ selectValue }}</p>
+
+<!-- Display a default message if no option is selected -->
+<p *ngIf="!isOptionSelected()">No value selected</p>
+
+<p>Textarea Value: {{ textareaValue }}</p>
+<p>Date Value: {{ dateValue }}</p>

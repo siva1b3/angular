@@ -1,0 +1,30 @@
+.active {
+  background-color: lightblue;
+}
+
+.large {
+  font-size: 20px;
+}
+
+.initial {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.modified {
+  background-color: #ffe4b5;
+  color: #9932cc;
+  border: 2px dashed #8a2be2;
+  padding: 12px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.base-class {
+  border: 2px solid #ccc;
+  padding: 10px;
+}

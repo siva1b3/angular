@@ -1,0 +1,20 @@
+<!-- Basic syntax -->
+<hr />
+<h4>Basic syntax</h4>
+<div [ngClass]="{ active: serverObject.isActive, large: serverObject.isLarge }">
+  <p>This is a sample div element</p>
+</div>
+<button (click)="toggleActive()">Toggle Active</button>
+<button (click)="toggleLarge()">Toggle Large</button>
+<hr />
+<h4>dynamically apply a CSS class using string interpolation</h4>
+<div [ngClass]="dynamicClass">
+  <p>This is a sample div element</p>
+</div>
+<button (click)="toggleDynamicClass()">Toggle Class</button>
+<hr />
+<h4>array syntax</h4>
+<div [ngClass]="getClassList()">
+  <p>This is a sample div element</p>
+</div>
+<button (click)="toggleClasses()">Toggle Classes</button>

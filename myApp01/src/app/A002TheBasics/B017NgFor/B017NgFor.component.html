@@ -1,0 +1,53 @@
+<hr />
+<p>Basics use of for by array with index</p>
+<ul>
+  <li *ngFor="let item of Basicitems01; let i = index">
+    {{ i + 1 }}. {{ item }}
+  </li>
+</ul>
+<hr />
+<h4>fruits and colurs</h4>
+<ul>
+  <li *ngFor="let fruit of fruits; let i = index">
+    {{ i + 1 }}. {{ fruit.name }} - {{ fruit.color }}
+  </li>
+</ul>
+<hr />
+<h1>Our Products</h1>
+<ul *ngFor="let product of products">
+  <li class="product-item">
+    <h2>{{ product.name }}</h2>
+    <p>Price: ${{ product.price }}</p>
+    <button (click)="addToCart(product)">Add to Cart</button>
+  </li>
+</ul>
+<hr />
+<h1>Our Products (Performance Optimized)</h1>
+<ul *ngFor="let product of products; trackBy: trackByProductId">
+  <li class="product-item">
+    <h2>{{ product.name }}</h2>
+    <p>Price: ${{ product.price }}</p>
+    <button (click)="updateProductPrice(product)">Update Price</button>
+  </li>
+</ul>
+<hr />
+<h1>Our Inventory (TrackBy with Object Mutation)</h1>
+<ul *ngFor="let item of inventoryItems; trackBy: trackByItem">
+  <li class="item-container">
+    <h2>{{ item.itemName }} {{ mainTest(item) }}</h2>
+    <p>Price: ${{ item.displayPrice }}</p>
+    <button (click)="toggleStock(item)">
+      {{ item.inStock ? "Mark Out of Stock" : "Mark In Stock" }}
+    </button>
+  </li>
+</ul>
+<hr />
+<label for="userName">UserName</label>
+<input type="text" name="userName" id="userName" [(ngModel)]="userName" />
+<button type="button" (click)="submitUserName()">Submit</button>
+<br />
+<br />
+<ul>
+  <li *ngFor="let user of userNameList">{{ user }}</li>
+</ul>
+<hr />

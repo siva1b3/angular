@@ -1,0 +1,23 @@
+<select (change)="onColorSelection($event)" [(ngModel)]="color">
+  <option value="" selected disabled>Select</option>
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="green">Green</option>
+</select>
+
+<div [ngSwitch]="getSelectedColor()">
+  <p *ngSwitchCase="'red'" [style.backgroundColor]="getSelectedColor()">
+    You selected red!
+  </p>
+  <p *ngSwitchCase="'blue'" [style.backgroundColor]="getSelectedColor()">
+    You selected blue!
+  </p>
+  <p *ngSwitchCase="'green'" [style.backgroundColor]="getSelectedColor()">
+    You selected green!
+  </p>
+  <p *ngSwitchDefault>Choose a color!</p>
+</div>
+
+<button *ngIf="hasSelectedOption()" (click)="resetOptions()">
+  Reset Options
+</button>
