@@ -33,5 +33,9 @@
   </ng-template>
 </div>
 <hr />
-<textarea name="" id=""></textarea>
+<input type="text" name="" id="" [(ngModel)]="stringOfNumbers" />
+<button type="button" (click)="submitNumberInput()" class="btn btn-primary">
+  Submit
+</button>
+<h3>result = {{ sum }}</h3>
 <hr />

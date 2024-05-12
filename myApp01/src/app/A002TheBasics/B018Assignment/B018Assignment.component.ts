@@ -34,6 +34,18 @@ export class B018AssignmentComponent implements OnInit {
     return this.componentData.timeValuesList.length === 0;
   }
 
+  stringOfNumbers?: string;
+  sum?: number = 0;
+
+  submitNumberInput() {
+    for (let i = 0; i < this.stringOfNumbers.length; i++) {
+      const k = parseInt(this.stringOfNumbers[i]);
+      if (k >= 0 && k <= 9) {
+        this.sum = this.sum + k;
+      }
+    }
+  }
+
   constructor() {}
 
   ngOnInit() {}

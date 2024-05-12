@@ -362,16 +362,48 @@
 // export class AppModule {}
 
 // B018AssignmentComponent
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+// import { FormsModule } from "@angular/forms";
+
+// import { AppComponent } from "./app.component";
+// import { A002TheBasicsComponent } from "./A002TheBasics/A002TheBasics.component";
+// import { B018AssignmentComponent } from "./A002TheBasics/B018Assignment/B018Assignment.component";
+
+// @NgModule({
+//   declarations: [AppComponent, A002TheBasicsComponent, B018AssignmentComponent],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// A101CalcComponent
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+// import { FormsModule } from "@angular/forms";
+
+// import { AppComponent } from "./app.component";
+// import { A101CalcComponent } from "./A101Calc/A101Calc.component";
+
+// @NgModule({
+//   declarations: [AppComponent, A101CalcComponent],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
-import { A002TheBasicsComponent } from "./A002TheBasics/A002TheBasics.component";
-import { B018AssignmentComponent } from "./A002TheBasics/B018Assignment/B018Assignment.component";
+import { A102CalculatorComponent } from "./A102Calculator/A102Calculator.component";
 
 @NgModule({
-  declarations: [AppComponent, A002TheBasicsComponent, B018AssignmentComponent],
+  declarations: [AppComponent, A102CalculatorComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

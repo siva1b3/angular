@@ -1,0 +1,21 @@
+.main {
+  .normalButton:hover > button {
+    scale: 1.2;
+    background-color: aqua;
+  }
+
+  .normalButton:hover {
+    background-color: blanchedalmond;
+  }
+
+  .finalButton:hover {
+    background-color: rgb(245, 76, 10);
+    font-weight: bolder;
+    font-size: x-large;
+    scale: 1.2;
+  }
+
+  input:hover {
+    cursor: none;
+  }
+}
