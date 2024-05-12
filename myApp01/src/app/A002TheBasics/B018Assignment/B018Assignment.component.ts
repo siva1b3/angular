@@ -27,7 +27,7 @@ export class B018AssignmentComponent implements OnInit {
   }
 
   listOfTimeValues() {
-    return this.componentData.timeValuesList;
+    return this.componentData.timeValuesList.reverse();
   }
 
   emptyList() {
