@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="toggleParagraphVisibility()"
+  >
+    toggle Display Paragraph
+  </button>
+  <p class="h5" *ngIf="componentData.isParagraphVisible">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi omnis odio
+    aliquam, praesentium laborum accusamus blanditiis quos ipsam corporis
+    delectus pariatur excepturi repellendus voluptas officia itaque modi
+    voluptates voluptatem aliquid! Excepturi sed iure esse laboriosam numquam
+    corporis nihil enim, temporibus nulla voluptas vitae rem dolor omnis
+    consequatur sint ex, iusto delectus vel voluptate eius! Vero distinctio
+    recusandae enim, magnam consequatur nostrum delectus, labore iste, eligendi
+    possimus non vitae sit reiciendis dolorum necessitatibus. Nisi explicabo
+    ducimus doloremque error placeat debitis quaerat aperiam alias iusto
+    architecto! Ipsa atque unde rem voluptatem laudantium, quaerat deleniti
+    voluptates suscipit tempore a praesentium at optio doloremque.
+  </p>
+  <div *ngIf="emptyList(); else dateList">Welcome back, friend.</div>
+
+  <ng-template #dateList>
+    <div *ngFor="let timeValue of listOfTimeValues()">
+      <button class="datetime-container">
+        <span id="datetime"
+          >changed state to {{ !timeValue.toggleState }}
+          {{ timeValue.timevalue.toLocaleString() }}</span
+        >
+      </button>
+    </div>
+  </ng-template>
+</div>
+<hr />
+<textarea name="" id=""></textarea>
+<hr />

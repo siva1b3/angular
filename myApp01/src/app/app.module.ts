@@ -345,16 +345,33 @@
 
 // B017NgForComponent
 
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+// import { FormsModule } from "@angular/forms";
+
+// import { AppComponent } from "./app.component";
+// import { A002TheBasicsComponent } from "./A002TheBasics/A002TheBasics.component";
+// import { B017NgForComponent } from "./A002TheBasics/B017NgFor/B017NgFor.component";
+
+// @NgModule({
+//   declarations: [AppComponent, A002TheBasicsComponent, B017NgForComponent],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// B018AssignmentComponent
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { A002TheBasicsComponent } from "./A002TheBasics/A002TheBasics.component";
-import { B017NgForComponent } from "./A002TheBasics/B017NgFor/B017NgFor.component";
+import { B018AssignmentComponent } from "./A002TheBasics/B018Assignment/B018Assignment.component";
 
 @NgModule({
-  declarations: [AppComponent, A002TheBasicsComponent, B017NgForComponent],
+  declarations: [AppComponent, A002TheBasicsComponent, B018AssignmentComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
