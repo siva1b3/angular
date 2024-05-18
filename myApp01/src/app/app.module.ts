@@ -7,7 +7,7 @@
 // import { AppComponent } from "./app.component";
 
 // @NgModule({
-//   declarations: [AppComponent],
+//   declarations: [	AppComponent],
 //   imports: [BrowserModule],
 //   providers: [],
 //   bootstrap: [AppComponent],
@@ -363,21 +363,21 @@
 
 // B018AssignmentComponent
 
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+// import { FormsModule } from "@angular/forms";
 
-import { AppComponent } from "./app.component";
-import { A002TheBasicsComponent } from "./A002TheBasics/A002TheBasics.component";
-import { B018AssignmentComponent } from "./A002TheBasics/B018Assignment/B018Assignment.component";
+// import { AppComponent } from "./app.component";
+// import { A002TheBasicsComponent } from "./A002TheBasics/A002TheBasics.component";
+// import { B018AssignmentComponent } from "./A002TheBasics/B018Assignment/B018Assignment.component";
 
-@NgModule({
-  declarations: [AppComponent, A002TheBasicsComponent, B018AssignmentComponent],
-  imports: [BrowserModule, FormsModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
+// @NgModule({
+//   declarations: [AppComponent, A002TheBasicsComponent, B018AssignmentComponent],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
 
 // A101CalcComponent
 
@@ -396,6 +396,8 @@ export class AppModule {}
 // })
 // export class AppModule {}
 
+// A102CalculatorComponent
+
 // import { BrowserModule } from "@angular/platform-browser";
 // import { NgModule } from "@angular/core";
 // import { FormsModule } from "@angular/forms";
@@ -405,6 +407,97 @@ export class AppModule {}
 
 // @NgModule({
 //   declarations: [AppComponent, A102CalculatorComponent],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// A100ProjectComponent
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+// import { FormsModule } from "@angular/forms";
+
+// import { AppComponent } from "./app.component";
+// import { A100ProjectComponent } from "./A100Project/A100Project.component";
+
+// @NgModule({
+//   declarations: [AppComponent, A100ProjectComponent],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// A103UserFormComponent
+
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http"; // Import HttpClientModule
+
+import { AppComponent } from "./app.component";
+import { A103UserFormComponent } from "./A103UserForm/A103UserForm.component";
+
+@NgModule({
+  declarations: [AppComponent, A103UserFormComponent],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+
+// B101HeaderComponentComponent
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+// import { FormsModule } from "@angular/forms";
+
+// import { AppComponent } from "./app.component";
+// import { A100ProjectComponent } from "./A100Project/A100Project.component";
+// import { B101HeaderComponentComponent } from "./A100Project/B101HeaderComponent/B101HeaderComponent.component";
+
+// @NgModule({
+//   declarations: [
+//     AppComponent,
+//     A100ProjectComponent,
+//     B101HeaderComponentComponent,
+//   ],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// A200DebuggingComponent
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+// import { FormsModule } from "@angular/forms";
+
+// import { AppComponent } from "./app.component";
+// import { A200DebuggingComponent } from "./A200Debugging/A200Debugging.component";
+
+// @NgModule({
+//   declarations: [AppComponent, A200DebuggingComponent],
+//   imports: [BrowserModule, FormsModule],
+//   providers: [],
+//   bootstrap: [AppComponent],
+// })
+// export class AppModule {}
+
+// A300ComponentsDatabindingDeepDiveComponent
+
+// import { BrowserModule } from "@angular/platform-browser";
+// import { NgModule } from "@angular/core";
+// import { FormsModule } from "@angular/forms";
+
+// import { AppComponent } from "./app.component";
+// import { A300ComponentsDatabindingDeepDiveComponent } from "./A300ComponentsDatabindingDeepDive/A300ComponentsDatabindingDeepDive.component";
+
+// @NgModule({
+//   declarations: [AppComponent, A300ComponentsDatabindingDeepDiveComponent],
 //   imports: [BrowserModule, FormsModule],
 //   providers: [],
 //   bootstrap: [AppComponent],
