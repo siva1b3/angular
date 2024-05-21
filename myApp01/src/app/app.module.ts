@@ -7,7 +7,7 @@
 // import { AppComponent } from "./app.component";
 
 // @NgModule({
-//   declarations: [	AppComponent],
+//   declarations: [		AppComponent,],
 //   imports: [BrowserModule],
 //   providers: [],
 //   bootstrap: [AppComponent],
@@ -430,7 +430,7 @@
 // })
 // export class AppModule {}
 
-// A103UserFormComponent
+// A103UserDataComponent
 
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -438,10 +438,10 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http"; // Import HttpClientModule
 
 import { AppComponent } from "./app.component";
-import { A103UserFormComponent } from "./A103UserForm/A103UserForm.component";
+import { A103UserDataComponent } from "./A103UserData/A103UserData.component";
 
 @NgModule({
-  declarations: [AppComponent, A103UserFormComponent],
+  declarations: [AppComponent, A103UserDataComponent],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

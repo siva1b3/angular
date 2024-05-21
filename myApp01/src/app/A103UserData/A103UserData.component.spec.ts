@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { A103UserFormComponent } from './A103UserForm.component';
+import { A103UserDataComponent } from './A103UserData.component';
 
-describe('A103UserFormComponent', () => {
-  let component: A103UserFormComponent;
-  let fixture: ComponentFixture<A103UserFormComponent>;
+describe('A103UserDataComponent', () => {
+  let component: A103UserDataComponent;
+  let fixture: ComponentFixture<A103UserDataComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ A103UserFormComponent ]
+      declarations: [ A103UserDataComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(A103UserFormComponent);
+    fixture = TestBed.createComponent(A103UserDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
