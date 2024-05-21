@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { fetchUserData } = require("../services/UserDataService");
 
 // Define route to handle user login
 router.post("/login", async (req, res) => {
@@ -11,9 +12,18 @@ router.post("/login", async (req, res) => {
     // For demonstration, let's just log the data
     console.log("Received login data:", postData);
 
-    // Simulate authentication
-    const isAuthenticated =
-      postData.username === "admin" && postData.password === "password";
+    const userData = await fetchUserData();
+
+    let isAuthenticated = false;
+
+    for (let user of userData) {
+      if (
+        user.userName === postData.userName &&
+        user.password === postData.password
+      ) {
+        isAuthenticated = true;
+      }
+    }
 
     // Send appropriate response based on authentication status
     if (isAuthenticated) {

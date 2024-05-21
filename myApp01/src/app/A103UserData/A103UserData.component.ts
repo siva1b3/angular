@@ -24,7 +24,7 @@ export class A103UserDataComponent implements OnInit {
 
   onSubmit() {
     const data = {
-      username: this.formData.email,
+      userName: this.formData.email,
       password: this.formData.password,
     };
     this.http.post("http://localhost:3000/api/auth/login", data).subscribe({
@@ -41,8 +41,8 @@ export class A103UserDataComponent implements OnInit {
 }
 
 type formDataType = {
-  email?: undefined;
-  password?: undefined;
+  email?: string;
+  password?: string;
 };
 
 type serviceDataType = {

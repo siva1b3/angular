@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-const userDataRoutes = require("./routes/userDataRoutes");
 const countryRoutes = require("./routes/countryRoutes");
 const authRoutes = require("./routes/authRoutes");
 
@@ -11,9 +10,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
-
-// Mount user data routes
-app.use("/api/user", userDataRoutes);
 
 // Mount country routes
 app.use("/api/country", countryRoutes);
