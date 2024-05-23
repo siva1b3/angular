@@ -35,6 +35,14 @@ export class A103UserDataComponent implements OnInit {
         console.log(error);
       },
     });
+    this.http.get("http://localhost:3000/api/countries/getlist").subscribe({
+      next: (response: any) => {
+        console.log("Response from countries:", response);
+      },
+      error: (error: any) => {
+        console.log(error);
+      },
+    });
   }
 
   ngOnInit() {}

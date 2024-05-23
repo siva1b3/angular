@@ -1,12 +1,12 @@
 // AuthService.ts
 import { getUserByUsernameAndPassword } from "../models/UserLogin";
 
-async function authenticateUser(username: string, password: string) {
+async function authenticateUser(userName: string, password: string) {
   try {
-    const users = await getUserByUsernameAndPassword(username, password);
+    const users = await getUserByUsernameAndPassword(userName, password);
     console.log(users);
 
-    console.log(username, password);
+    console.log(userName, password);
     console.log("part serivce is over");
 
     if (users.length > 0) {

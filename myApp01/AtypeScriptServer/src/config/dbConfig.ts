@@ -1,18 +1,20 @@
-// dbConfig.ts
-import sql, { ConnectionPool } from "mssql";
+import sql, { ConnectionPool, config } from "mssql";
 
-const config = {
+export const dbConfig: config = {
   user: "siva",
   password: "Welcome@123",
   server: "QRA-sivanagababu\\SQLEXPRESS",
   database: "TestMain",
+  connectionTimeout: 500000,
+  requestTimeout: 500000,
   options: {
-    encrypt: true,
+    encrypt: true, // for Azure, this will be true by default
+    trustServerCertificate: true, // change to true for local dev / self-signed certs
   },
 };
 
 const poolPromise: Promise<ConnectionPool> = new Promise((resolve, reject) => {
-  const pool = new sql.ConnectionPool(config);
+  const pool = new sql.ConnectionPool(dbConfig);
   pool
     .connect()
     .then(() => {
