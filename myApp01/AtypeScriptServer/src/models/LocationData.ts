@@ -1,8 +1,8 @@
-// Country.ts
+// LocationData.ts
 import { sql, poolPromise } from "../config/dbConfig";
-import { Location } from "../types/types";
+import { Location } from "../types/LocationDataTypes";
 
-async function getCountries(): Promise<Location[]> {
+async function getLocationData(): Promise<Location[]> {
   try {
     const pool = await poolPromise;
     const result = await pool.request().query("SELECT * FROM dbo.Location");
@@ -13,4 +13,4 @@ async function getCountries(): Promise<Location[]> {
   }
 }
 
-export { getCountries };
+export { getLocationData };

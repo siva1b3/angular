@@ -1,4 +1,4 @@
-// types.ts
+// LocationDataTypes.ts
 
 export interface Location {
   LocationID: number;
