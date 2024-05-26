@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { firstValueFrom } from "rxjs";
 
 @Component({
   selector: "A103UserData",
@@ -22,31 +23,41 @@ export class A103UserDataComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  onSubmit() {
+  userLoggedIn() {
+    return this.serviceData.isLoggedIn;
+  }
+
+  async onSubmit() {
     const data = {
       userName: this.formData.email,
       password: this.formData.password,
     };
-    this.http.post("http://localhost:3000/api/auth/login", data).subscribe({
-      next: (response: any) => {
-        console.log("Response from Node:", response);
-      },
-      error: (error: any) => {
-        console.log(error);
-      },
-    });
-    this.http
-      .get("http://localhost:3000/api/countries/getAllLoactionData")
-      .subscribe({
-        next: (response: any) => {
-          console.log("Response from countries:", response);
-        },
-        error: (error: any) => {
-          console.log(error);
-        },
-      });
-  }
 
+    try {
+      // First API call
+      const loginResponse: any = await firstValueFrom(
+        this.http.post<authResponseType>(
+          "http://localhost:4300/api/auth/login",
+          data
+        )
+      );
+      console.log("Response from Node:", loginResponse);
+
+      // Check if isSucess is true before making the second API call
+      if (loginResponse.isSucess) {
+        const countriesResponse: any = await firstValueFrom(
+          this.http.get(
+            "http://localhost:3000/api/countries/getAllLoactionData"
+          )
+        );
+        console.log("Response from countries:", countriesResponse);
+      } else {
+        console.log("Login was not successful");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
   ngOnInit() {}
 }
 
@@ -57,4 +68,8 @@ type formDataType = {
 
 type serviceDataType = {
   isLoggedIn: boolean;
+};
+
+type authResponseType = {
+  isAuthSucess: boolean;
 };

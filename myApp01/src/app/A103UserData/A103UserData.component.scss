@@ -1,46 +1,41 @@
-.login-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-  .form-group {
-    margin-bottom: 1rem;
-
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-  }
-
-  .btn {
+.mainbody {
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  .loginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
 
-    &:hover {
-      background-color: #0056b3;
+    .topbar {
+      flex: 0 0 20%; /* Take up 30% of the available height */
+      background-color: #f0f0f0;
+      width: 100%;
+      padding-block-start: 1%;
+      padding-inline-start: 1%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: flex 0.5s ease; /* Smooth transition for flex property change */
     }
 
-    &:disabled {
-      background-color: #cccccc;
-      cursor: not-allowed;
+    @media only screen and (max-width: 600px) {
+      .topbar {
+        flex: 0 0 25%;
+      }
+    }
+
+    .loginForm {
+      flex: 1; /* Take up remaining space */
+      background-color: #ffffff;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
