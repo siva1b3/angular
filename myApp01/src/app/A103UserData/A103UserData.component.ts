@@ -15,6 +15,7 @@ export class A103UserDataComponent implements OnInit {
 
   private serviceData: serviceDataType = {
     isLoggedIn: false,
+    isActiveLoginPageVisible: true,
   };
 
   userNotLoggedIn() {
@@ -68,6 +69,7 @@ type formDataType = {
 
 type serviceDataType = {
   isLoggedIn: boolean;
+  isActiveLoginPageVisible: boolean;
 };
 
 type authResponseType = {
