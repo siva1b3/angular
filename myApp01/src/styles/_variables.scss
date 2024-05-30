@@ -1,0 +1,123 @@
+// src/styles/_variables.scss
+
+// SCSS Variables for Bootstrap Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// Mixin for Media Queries
+@mixin minWidth($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: #{$breakpoint-sm}) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: #{$breakpoint-md}) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: #{$breakpoint-lg}) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: #{$breakpoint-xl}) {
+      @content;
+    }
+  } @else if $breakpoint == xxl {
+    @media (min-width: #{$breakpoint-xxl}) {
+      @content;
+    }
+  }
+}
+
+// Mixin for Media Queries
+@mixin maxWidth($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: #{$breakpoint-sm}) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: #{$breakpoint-md}) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: #{$breakpoint-lg}) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: #{$breakpoint-xl}) {
+      @content;
+    }
+  } @else if $breakpoint == xxl {
+    @media (max-width: #{$breakpoint-xxl}) {
+      @content;
+    }
+  }
+}
+
+@mixin inBetween($minWidth, $maxWidth) {
+  @if (($minWidth == xs) and ($maxWidth == sm)) {
+    @media ((min-width: #{$breakpoint-xs}) and (max-width: #{$breakpoint-sm})) {
+      @content;
+    }
+  } @else if (($minWidth == xs) and ($maxWidth == md)) {
+    @media ((min-width: #{$breakpoint-xs}) and (max-width: #{$breakpoint-md})) {
+      @content;
+    }
+  } @else if (($minWidth == xs) and ($maxWidth == lg)) {
+    @media ((min-width: #{$breakpoint-xs}) and (max-width: #{$breakpoint-lg})) {
+      @content;
+    }
+  } @else if (($minWidth == xs) and ($maxWidth == xl)) {
+    @media ((min-width: #{$breakpoint-xs}) and (max-width: #{$breakpoint-xl})) {
+      @content;
+    }
+  } @else if (($minWidth == xs) and ($maxWidth == xxl)) {
+    @media ((min-width: #{$breakpoint-xs}) and (max-width: #{$breakpoint-xxl})) {
+      @content;
+    }
+  } @else if (($minWidth == sm) and ($maxWidth == md)) {
+    @media ((min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-md})) {
+      @content;
+    }
+  } @else if (($minWidth == sm) and ($maxWidth == lg)) {
+    @media ((min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-lg})) {
+      @content;
+    }
+  } @else if (($minWidth == sm) and ($maxWidth == xl)) {
+    @media ((min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-xl})) {
+      @content;
+    }
+  } @else if (($minWidth == sm) and ($maxWidth == xxl)) {
+    @media ((min-width: #{$breakpoint-sm}) and (max-width: #{$breakpoint-xxl})) {
+      @content;
+    }
+  } @else if (($minWidth == md) and ($maxWidth == lg)) {
+    @media ((min-width: #{$breakpoint-md}) and (max-width: #{$breakpoint-lg})) {
+      @content;
+    }
+  } @else if (($minWidth == md) and ($maxWidth == xl)) {
+    @media ((min-width: #{$breakpoint-md}) and (max-width: #{$breakpoint-xl})) {
+      @content;
+    }
+  } @else if (($minWidth == md) and ($maxWidth == xxl)) {
+    @media ((min-width: #{$breakpoint-md}) and (max-width: #{$breakpoint-xxl})) {
+      @content;
+    }
+  } @else if (($minWidth == lg) and ($maxWidth == xl)) {
+    @media ((min-width: #{$breakpoint-lg}) and (max-width: #{$breakpoint-xl})) {
+      @content;
+    }
+  } @else if (($minWidth == lg) and ($maxWidth == xxl)) {
+    @media ((min-width: #{$breakpoint-lg}) and (max-width: #{$breakpoint-xxl})) {
+      @content;
+    }
+  } @else if (($minWidth == xl) and ($maxWidth == xxl)) {
+    @media ((min-width: #{$breakpoint-lg}) and (max-width: #{$breakpoint-xxl})) {
+      @content;
+    }
+  }
+}

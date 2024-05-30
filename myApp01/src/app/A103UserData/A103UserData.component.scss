@@ -1,250 +1,91 @@
+@import "src/styles/variables";
+
 .mainPage {
   height: 100%;
   width: 100%;
   display: block;
+  background-color: green;
+  padding: 3px;
+  overflow: hidden;
+
+  * {
+    // div {
+    //   outline: solid 1px aquamarine;
+    //   box-sizing: border-box;
+    // }
+    outline: solid 1px aquamarine;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
 
   .loginPage {
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    background-color: aliceblue;
 
-    .topbar {
+    .topBar {
+      width: inherit;
       height: 20%;
-      width: 100%;
-      transition: all 0.5s ease-in-out;
       display: flex;
-      align-items: center;
       justify-content: center;
-      .Login-wrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+      align-items: center;
+      transition: all 0.5s ease-in-out;
+      h1 {
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: radial-gradient(ellipse, #553c9a, #ee4b2b);
+        font-weight: bolder;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 4rem;
+
+        &:hover {
+          cursor: pointer;
+          transition: background-image 3s ease-out;
+          -webkit-text-stroke: 1px rgb(193, 27, 27);
+          background-image: linear-gradient(
+            to right top,
+            #1868e0,
+            #009cff,
+            #00c1dc,
+            #00dd85,
+            #a8eb12
+          );
+        }
       }
 
-      .Login {
-        position: relative;
-        font-size: 80px;
-        font-weight: 700;
-        line-height: 1.2;
-        color: #fff;
-        letter-spacing: 5px;
-        z-index: 1;
-        text-shadow: 9px 10px 7px rgba(0, 0, 0, 0.57);
-      }
-
-      .Login:before,
-      .Login:after {
-        display: block;
-        content: attr(data-Login);
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.8;
-      }
-
-      .Login:before {
-        animation: Login-color 0.5s cubic-bezier(0.4, 0.5, 0.5, 0.1) both
-          infinite;
-        color: rgb(0, 30, 255);
-        z-index: -1;
-      }
-
-      .Login:after {
-        animation: Login-color 0.5s cubic-bezier(0.4, 0.5, 0.5, 0.1) reverse
-          both infinite;
-        color: #ff0026;
-        z-index: -2;
-      }
-
-      @keyframes Login-color {
-        0% {
-          transform: translate(0);
-        }
-
-        20% {
-          transform: translate(-3px, 3px);
-        }
-
-        40% {
-          transform: translate(-3px, -3px);
-        }
-
-        60% {
-          transform: translate(3px, 3px);
-        }
-
-        80% {
-          transform: translate(3px, -3px);
-        }
-
-        to {
-          transform: translate(0);
+      @include maxWidth(md) {
+        height: 30%;
+        h1 {
+          font-size: 3rem;
         }
       }
     }
 
     .loginFormConatiner {
+      width: inherit;
       height: 80%;
-      width: 100%;
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
+      transition: all 0.5s ease-in-out;
 
       .loginForm {
         width: 35%;
-        transition: all 0.5s ease-in-out;
-        display: block;
-
-        form {
-          margin: 10%;
-
-          div,
-          button {
-            margin: 2%;
-            margin-bottom: 5%;
-          }
-
-          button {
-            width: 96%;
-          }
-
-          label {
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            transition: 700ms ease;
-            font-variation-settings: "wght" 311;
-            margin-bottom: 0.8rem;
-            color: rgb(0, 255, 255);
-            outline: none;
-            text-align: center;
-            font-weight: bold;
-            border: #ff0026;
-          }
-          label:hover {
-            font-variation-settings: "wght" 582;
-            letter-spacing: 2px;
-          }
-
-          /* CSS */
-          .button {
-            align-items: center;
-            background-image: linear-gradient(
-              144deg,
-              #af40ff,
-              #5b42f3 50%,
-              #00ddeb
-            );
-            border: 0;
-            border-radius: 8px;
-            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-            box-sizing: border-box;
-            color: #ffffff;
-            display: flex;
-            font-family: Phantomsans, sans-serif;
-            font-size: 20px;
-            justify-content: center;
-            line-height: 1em;
-            max-width: 100%;
-            min-width: 140px;
-            padding: 3% 10%;
-            text-decoration: none;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            white-space: nowrap;
-            cursor: pointer;
-          }
-
-          @media (min-width: 768px) {
-            .button {
-              font-size: 24px;
-              min-width: 196px;
-            }
-          }
-        }
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      .topbar {
-        height: 30%;
-        width: 100%;
-      }
-      .loginForm {
-        height: 70%;
-        width: 100%;
-      }
-
-      .topbar h1 {
-        font-size: 50px;
-      }
-    }
-
-    @media screen and (max-width: 300px) {
-      .topbar h1 {
-        font-size: xx-large;
-      }
-    }
-
-    .background {
-      html {
         height: 100%;
       }
 
-      body {
-        margin: 0;
-      }
-
-      .bg {
-        animation: slide 3s ease-in-out infinite alternate;
-        background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
-        bottom: 0;
-        left: -50%;
-        opacity: 0.5;
-        position: fixed;
-        right: -50%;
-        top: 0;
-        z-index: -1;
-      }
-
-      .bg2 {
-        animation-direction: alternate-reverse;
-        animation-duration: 4s;
-      }
-
-      .bg3 {
-        animation-duration: 5s;
-      }
-
-      .content {
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 0.25em;
-        box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
-        box-sizing: border-box;
-        left: 50%;
-        padding: 10vmin;
-        position: fixed;
-        text-align: center;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      h1 {
-        font-family: monospace;
-      }
-
-      @keyframes slide {
-        0% {
-          transform: translateX(-25%);
+      @include maxWidth(md) {
+        height: 70%;
+        .loginForm {
+          width: 90%;
         }
-        100% {
-          transform: translateX(25%);
+      }
+
+      @include maxWidth(sm) {
+        .loginForm {
+          width: 100%;
         }
       }
     }

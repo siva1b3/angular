@@ -1,52 +1,10 @@
 <div class="mainPage">
-  <div class="loginPage" *ngIf="userNotLoggedIn()">
-    <div class="background">
-      <div class="bg"></div>
-      <div class="bg bg2"></div>
-      <div class="bg bg3"></div>
-    </div>
-    <nav class="topbar">
-      <div class="Login-wrapper">
-        <div class="Login" data-Login="Login">Login Page</div>
-      </div>
+  <div class="loginPage">
+    <nav class="topBar">
+      <h1>login Page</h1>
     </nav>
-    <div class="loginFormConatiner">
-      <div class="loginForm">
-        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-          <div class="form-group">
-            <label for="email">Name/Email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              autocomplete="email"
-              class="form-control"
-              [(ngModel)]="formData.email"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="form-control"
-              autocomplete="off"
-              [(ngModel)]="formData.password"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            class="btn btn-danger"
-            [disabled]="loginForm.invalid"
-            class="button"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
+    <section class="loginFormConatiner">
+      <div class="loginForm">kk</div>
+    </section>
   </div>
 </div>
