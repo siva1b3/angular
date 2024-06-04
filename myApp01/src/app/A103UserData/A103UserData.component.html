@@ -1,11 +1,17 @@
-<div class="mainPage">
-  <div class="loginPage">
-    <nav class="topBar">
+<!-- user-data.component.html -->
+<div class="main-page">
+  <div class="login-page" *ngIf="isUserNotLoggedIn()">
+    <nav class="top-bar">
       <h1>Welcome</h1>
     </nav>
-    <section class="loginFormConatiner">
-      <div class="loginForm">
-        <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="form">
+    <section class="login-form-container">
+      <div class="login-form">
+        <form
+          *ngIf="isInitialLoginView(); else loginFailedTemplate"
+          (ngSubmit)="handleLogin()"
+          #loginForm="ngForm"
+          class="form"
+        >
           <div class="form-group">
             <label for="username">Username</label>
             <input
@@ -13,7 +19,7 @@
               id="username"
               name="username"
               class="form-control"
-              [(ngModel)]="formData.email"
+              [(ngModel)]="loginCredentials.email"
               #usernameField="ngModel"
               required
             />
@@ -32,7 +38,7 @@
               id="password"
               name="password"
               class="form-control"
-              [(ngModel)]="formData.password"
+              [(ngModel)]="loginCredentials.password"
               #passwordField="ngModel"
               required
             />
@@ -44,9 +50,9 @@
             </div>
           </div>
 
-          <div class="buttonContainer">
+          <div class="button-container">
             <button
-              type="Login"
+              type="submit"
               class="btn btn-primary"
               [disabled]="loginForm.invalid"
             >
@@ -54,6 +60,15 @@
             </button>
           </div>
         </form>
+
+        <ng-template #loginFailedTemplate>
+          <label for="login-try-again" class="login-try-again">
+            Wrong data entered
+            <button id="login-try-again" type="button" (click)="resetLogin()">
+              Login Again
+            </button>
+          </label>
+        </ng-template>
       </div>
     </section>
     <div class="background">
@@ -108,6 +123,33 @@
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-page" *ngIf="isUserLoggedIn()">
+    <nav class="dashboard-nav">
+      <div class="row">
+        <div
+          class="col-lg-10 col-md-8 col-sm-6 d-lg-flex justify-content-start align-items-center"
+        >
+          <div
+            class="heading-container h-100 w-lg-100 d-flex justify-content-center align-items-center"
+          >
+            <h1>Welcome {{ authResponse.FullName }}</h1>
+          </div>
+        </div>
+        <div
+          class="col-lg-2 col-md-4 col-sm-6 logout-button-container align-items-center"
+        >
+          <button type="button" class="btn btn-danger" (click)="handleLogout()">
+            Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="list-and-new-form-container">
+      <div class="row">
+        <h1>List of all staff</h1>
       </div>
     </div>
   </div>

@@ -1,11 +1,30 @@
 {
-    "folders": [
-      {
-        "path": "."
-      }
-    ],
-    "settings": {
-      "asciidoc.antora.enableAntoraSupport": false
+  "folders": [
+    {
+      "path": "."
     }
+  ],
+  "settings": {
+    "asciidoc.antora.enableAntoraSupport": false,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#003c00",
+        "activityBar.background": "#003c00",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#4040ff",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#003c00",
+        "statusBar.background": "#000900",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#003c00",
+        "statusBarItem.remoteBackground": "#000900",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#000900",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#00090099",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#000900"
   }
-  
+}

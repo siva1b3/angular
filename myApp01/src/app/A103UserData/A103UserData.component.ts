@@ -8,70 +8,138 @@ import { firstValueFrom } from "rxjs";
   styleUrls: ["./A103UserData.component.scss"],
 })
 export class A103UserDataComponent implements OnInit {
-  formData: formDataType = {
+  loginCredentials: LoginData = {
     email: undefined,
     password: undefined,
   };
 
-  private serviceData: serviceDataType = {
-    isLoggedIn: false,
-    isActiveLoginPageVisible: true,
-  };
+  authResponse: AuthResponse = {};
 
-  userNotLoggedIn() {
-    return this.serviceData.isLoggedIn === false ? true : false;
-  }
+  private appState: AppState = {
+    isLoggedIn: JSON.parse(sessionStorage.getItem("isLoggedIn") || "false"),
+    isInitialLoginViewVisible: JSON.parse(
+      sessionStorage.getItem("isInitialLoginViewVisible") || "true"
+    ),
+    isWrongCredentials: JSON.parse(
+      sessionStorage.getItem("isWrongCredentials") || "false"
+    ),
+  };
 
   constructor(private http: HttpClient) {}
 
-  userLoggedIn() {
-    return this.serviceData.isLoggedIn;
+  ngOnInit() {}
+
+  isUserNotLoggedIn() {
+    return !this.appState.isLoggedIn;
   }
 
-  async onSubmit() {
-    const data = {
-      userName: this.formData.email,
-      password: this.formData.password,
+  isUserLoggedIn() {
+    return this.appState.isLoggedIn;
+  }
+
+  isInitialLoginView() {
+    return this.appState.isInitialLoginViewVisible;
+  }
+
+  resetLogin() {
+    this.appState.isLoggedIn = false;
+    this.appState.isInitialLoginViewVisible = true;
+    this.appState.isWrongCredentials = false;
+    this.clearLoginForm();
+    this.updateSessionStorage();
+  }
+
+  handleLogout() {
+    this.resetLogin();
+  }
+
+  updateSessionStorage() {
+    sessionStorage.setItem(
+      "isLoggedIn",
+      JSON.stringify(this.appState.isLoggedIn)
+    );
+    sessionStorage.setItem(
+      "isInitialLoginViewVisible",
+      JSON.stringify(this.appState.isInitialLoginViewVisible)
+    );
+    sessionStorage.setItem(
+      "isWrongCredentials",
+      JSON.stringify(this.appState.isWrongCredentials)
+    );
+  }
+
+  async handleLogin() {
+    const loginPayload = {
+      userName: this.loginCredentials.email,
+      password: this.loginCredentials.password,
     };
 
     try {
-      // First API call
-      const loginResponse: any = await firstValueFrom(
-        this.http.post<authResponseType>(
+      const loginResponse: AuthResponse = await firstValueFrom(
+        this.http.post<AuthResponse>(
           "http://localhost:4300/api/auth/login",
-          data
+          loginPayload
         )
       );
-      console.log("Response from Node:", loginResponse);
 
-      // Check if isSucess is true before making the second API call
-      if (loginResponse.isSucess) {
-        const countriesResponse: any = await firstValueFrom(
-          this.http.get(
-            "http://localhost:3000/api/countries/getAllLoactionData"
-          )
-        );
-        console.log("Response from countries:", countriesResponse);
+      if (loginResponse.isAuth) {
+        this.appState.isLoggedIn = true;
+        this.appState.isInitialLoginViewVisible = false;
+        this.appState.isWrongCredentials = false;
+        this.authResponse = { ...loginResponse };
+        console.log(this.authResponse);
+
+        this.clearLoginForm();
       } else {
-        console.log("Login was not successful");
+        this.appState.isLoggedIn = false;
+        this.appState.isInitialLoginViewVisible = false;
+        this.appState.isWrongCredentials = true;
+      }
+      this.updateSessionStorage();
+      if (loginResponse.isAuth) {
+        await this.fetchAllLocations();
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
-  ngOnInit() {}
+
+  clearLoginForm() {
+    this.loginCredentials.email = undefined;
+    this.loginCredentials.password = undefined;
+  }
+
+  async fetchAllLocations(): Promise<void> {
+    try {
+      const locationsResponse: any = await firstValueFrom(
+        this.http.get("http://localhost:4300/api/locations/getAllLocations")
+      );
+      console.log("Response from locations API:", locationsResponse);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 }
 
-type formDataType = {
+interface LoginData {
   email?: string;
   password?: string;
-};
+}
 
-type serviceDataType = {
+interface AppState {
   isLoggedIn: boolean;
-  isActiveLoginPageVisible: boolean;
-};
+  isInitialLoginViewVisible: boolean;
+  isWrongCredentials: boolean;
+}
 
-type authResponseType = {
-  isAuthSucess: boolean;
-};
+interface UserInfo {
+  Age?: number;
+  Email?: string;
+  EmployeeID?: number;
+  FullName?: string;
+  Gender?: string;
+}
+
+interface AuthResponse extends UserInfo {
+  isAuth?: boolean;
+}

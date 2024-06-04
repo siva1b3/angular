@@ -1,10 +1,22 @@
 @import "src/styles/variables";
 
-.mainPage {
+/* Reset margin and padding for all col-lg elements */
+[class^="col-"],
+[class^="row"],
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.main-page {
   height: 100%;
   width: 100%;
   display: block;
   padding: 4px;
+  .row {
+    margin: 0%;
+    padding: 0%;
+  }
 
   * {
     .buttonContainer {
@@ -15,7 +27,38 @@
     box-sizing: border-box;
   }
 
-  .loginPage {
+  .dashboard-page {
+    background-image: url(./stacked-waves-haikei.svg);
+    * {
+      transition: all 0.3s ease-in-out;
+    }
+    height: 100%;
+    width: 100%;
+    .dashboard-nav {
+      background-image: linear-gradient(
+        51deg in oklab,
+        lch(59% 70 142) 0%,
+        oklch(90% 0.5 200) 105% 105%
+      );
+    }
+    .logout-button-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      button {
+        padding-inline: 2rem;
+        padding-block: 0.2rem;
+        font-size: larger;
+      }
+    }
+  }
+
+  .listAndNewFormContainer {
+    background-color: #eed1cc;
+  }
+
+  .login-page {
     height: 100%;
     width: 100%;
     background-color: aliceblue;
@@ -34,7 +77,24 @@
       @return nth($list, random(length($list)));
     }
 
-    .topBar {
+    .login-try-again {
+      color: #eed1cc;
+      font-size: xx-large;
+      font-weight: bolder;
+      button {
+        font-size: xx-large;
+        font-weight: bolder;
+        color: #009cff;
+        background-color: aliceblue;
+
+        &:hover {
+          color: whitesmoke;
+          background-color: #009cff;
+        }
+      }
+    }
+
+    .top-bar {
       width: inherit;
       height: 20%;
       display: flex;
@@ -82,7 +142,7 @@
       }
     }
 
-    .loginFormConatiner {
+    .login-form-container {
       width: inherit;
       height: 80%;
       display: flex;
@@ -94,7 +154,7 @@
         z-index: 10;
       }
 
-      .loginForm {
+      .login-form {
         width: 35%;
         height: 100%;
         display: flex;
@@ -119,7 +179,7 @@
             margin-top: 1rem;
           }
 
-          .buttonContainer {
+          .button-container {
             display: flex;
             justify-content: center;
             align-items: center;
