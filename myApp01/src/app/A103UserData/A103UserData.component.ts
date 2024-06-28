@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { firstValueFrom } from "rxjs";
+import { userInfo } from "os";
 
 @Component({
   selector: "A103UserData",
@@ -14,6 +15,8 @@ export class A103UserDataComponent implements OnInit {
   };
 
   authResponse: AuthResponse = {};
+
+  userInfo: UserInfo = {};
 
   private appState: AppState = {
     isLoggedIn: JSON.parse(sessionStorage.getItem("isLoggedIn") || "false"),
@@ -83,11 +86,32 @@ export class A103UserDataComponent implements OnInit {
       );
 
       if (loginResponse.isAuth) {
+        console.log(
+          "🚀 ~ A103UserDataComponent ~ handleLogin ~ loginResponse:",
+          loginResponse
+        );
         this.appState.isLoggedIn = true;
         this.appState.isInitialLoginViewVisible = false;
         this.appState.isWrongCredentials = false;
         this.authResponse = { ...loginResponse };
-        console.log(this.authResponse);
+        console.log(
+          "🚀 ~ A103UserDataComponent ~ handleLogin ~ authResponse:",
+          this.authResponse
+        );
+
+        const userInfoEntries = Object.entries(loginResponse).filter(
+          ([key]) => key in Object.keys(this.userInfo)
+        ); // Filter based on UserInfo properties
+        console.log(
+          "🚀 ~ A103UserDataComponent ~ handleLogin ~ userInfoEntries:",
+          userInfoEntries
+        );
+
+        this.userInfo = Object.fromEntries(userInfoEntries) as UserInfo;
+        console.log(
+          "🚀 ~ A103UserDataComponent ~ handleLogin ~ this.userInfo:",
+          this.userInfo
+        );
 
         this.clearLoginForm();
       } else {
